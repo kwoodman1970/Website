@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+  <TITLE>Handy Quote Server&nbsp;&ndash; Kevin Woodman</TITLE>
+
+  <LINK REL="stylesheet" TYPE="text/css" HREF="../common.css">
+  <!--[if lte IE 8]>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../common_ie8.css">
+  <![endif]-->
+
+  <STYLE TYPE="text/css">
+    <!--
+    /* It's not worth making a separate file for these short, page-specific styles. */
+
+    .Quotes
+    {
+      font-family:  "Times New Roman", "Times", serif;
+      font-size:    xx-large;
+    }
+
+    #QuotesZone
+    {
+      text-align:  center;
+    }
+
+    -->
+  </STYLE>
+
+  <SCRIPT TYPE="text/javascript" SRC="quoteserver.js"></SCRIPT>
+</HEAD>
+
+<BODY>
+  <H1>Handy Quote Server</H1>
+
+  <P STYLE="text-align:center;">A modern implementation of an old CGI program</P>
+
+  <HR>
+
+  <P><A HREF="../index.html#humor">Back to the home page</A></P>
+
+  <HR>
+
+  <P>
+    How many quotes would you like (1&nbsp;- 100000)?
+  </P>
+
+  <FORM ONSUBMIT="showQuotes('NumQuotes', 'QuotesZone'); return false;">
+    <INPUT ID="NumQuotes" TYPE="NUMBER" MIN="1" MAX="100000" VALUE="10">
+    <INPUT TYPE="SUBMIT" VALUE="Show">
+  </FORM>
+
+  <HR>
+
+  <DIV ID="QuotesZone"></DIV>
+</BODY>
+
+</HTML>

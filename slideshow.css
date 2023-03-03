@@ -1,0 +1,60 @@
+/**********************************************************************************************
+
+slideshow.css -- support Style sheets for "slideshow.js"
+
+See "slideshow.js" for full documentation.
+
+Attributes that can be safely modified without affecting functionality are indicated.  Caution
+should be used when modifying all other attributes.
+
+**********************************************************************************************/
+
+/* Style sheet for the <DIV> that contains the slideshow */
+
+DIV.Slideshow
+{
+  text-align:  center;
+}
+
+/*********************************************************************************************/
+
+/* Styleheet for the images in the slideshow */
+
+IMG.Slideshow
+{
+  display:       none;
+  margin-left:   auto;
+  margin-right:  auto;
+
+  /* Safe to modify: */
+
+  width:         640px;
+  height:        480px;
+}
+
+/*********************************************************************************************/
+
+/* Style sheet for the pips that appear below the images */
+
+DIV.Slideshow_Pip, DIV.Slideshow_Pip_Current
+{
+  display:           inline-block;
+
+  /* Safe to modify: */
+
+  margin:            2px;
+  border-width:      2px;
+  border-style:      solid;
+  border-radius:     3px;
+  height:            12px;
+  width:             12px;
+  border-color:      #000088;
+  background-color:  transparent;
+}
+
+DIV.Slideshow_Pip_Current
+{
+  /* Safe to modify: */
+
+  background-color:  #C88400;
+}

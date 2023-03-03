@@ -1,0 +1,54 @@
+/**********************************************************************************************
+
+common.css -- styles common to the website
+
+**********************************************************************************************/
+
+@import url("http://fonts.googleapis.com/css?family=Tangerine");
+
+A
+{
+  color:  #0099FF;
+}
+
+A:hover
+{
+  color:  #00FFFF;
+}
+
+A:visited
+{
+  color:  #CC66FF;
+}
+
+BODY
+{
+  padding-left:      30px;
+  background-color:  black;
+  background-image:  url('kw.svg');
+  color:             white;
+  font-family:       "Verdana", "Geneva", sans-serif;
+}
+
+H1, H2, H3
+{
+  text-align:    center;
+  font-family:   "Trebuchet MS", "Helvetica", "Helv", "Arial", sans-serif;
+  font-variant:  small-caps;
+  background-image:  url("rainbow.png");
+  background-position:  center;
+  background-repeat:  repeat-y;
+  background-size:  100% 1px;
+}
+
+H2 + P:first-letter
+{
+  color:        #DDDD00;
+  font-size:    300%;
+  font-family:  "Tangerine", "Times New Roman", "Times", serif;
+}
+
+NOSCRIPT
+{
+  color:  red;
+}

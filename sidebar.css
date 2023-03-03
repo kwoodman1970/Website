@@ -1,0 +1,98 @@
+/**********************************************************************************************
+
+sidebar.css -- style sheets for "sidebar.js"
+
+See "sidebar.js" for main documentation.
+
+Attributes that can be safely modified without affecting functionality are indicated.  Caution
+should be used when modifying all other attributes.
+
+NOTES ON GEOMETRY
+
+The width of the "SideMenu" element CAN be adjusted PROVIDED that its position and,
+if necessary, the width of the tab (that's the portion that protrudes into the browser window)
+is/are also adjusted.
+
+Consider this diagram:
+
+   --- SideBar.width ----
+  |                      |
+  |                 0px  |
+  |                  |   |
+  v                  v   v
+   ----------------------
+  |                  | S |
+  |                  | i |
+  |                  | d |
+  |                  | e |
+  |     SideBar      | B |
+  |                  | a |
+  |                  | r |
+  |                  | T |
+  |                  | a |
+  |                  | b |
+   ----------------------
+  ^                  ^   ^
+  |                  |   |
+   -- SideBar.left --|   |
+                     |   |
+  SideBarTab.height -----
+
+NOTE:  the "SideBarTab" block element is rotated 90 degrees, which is why "height" is used here
+instead of "width".
+
+The following mathematical relationships must hold:
+
+  SideBar.left < 0px;
+  SideBar.width > SideBarTab.height > 0px;
+  SideBar.left = SideBarTab.height - SideBar.width
+
+For example, if SideBar.width = 330px and SideBar.left = -300px then SideBarTab.height should
+be 30px.
+
+The block element for the tab  must be positioned so that its centre is at the centre of the
+tab area; it's then rotated so that the text (or whatever the content is) runs vertically.
+
+The following additional mathematical relationships must hold:
+
+  SideBarTab.bottom = 50% - (SideBarTab.height / 2)
+  SideBarTab.left = SideBar.width - (SideBarTab.width / 2) - (SideBarTab.height / 2)
+
+NOTE:  As of this writing, not all major browsers support the CSS3 "transform" attribute, so
+prefixed attributes are included as well.  This may prevent validation.
+
+**********************************************************************************************/
+
+/* Style sheet for the block element that contains the sidebar */
+
+#SideBar
+{
+  position:          fixed;
+  width:             330px;
+  top:               0px;
+  bottom:            0px;
+  left:              -300px;                            /* SideBarTab.height - SideBar.width */
+
+  /* Safe to modify: */
+
+  background-color:  teal;
+}
+
+/* Style sheet for the tab */
+
+#SideBarTab
+{
+  position:           absolute;
+  width:              2000px;    /* big enough to fit most browser windows -- and then some! */
+  height:             30px;
+  left:               -685px;  /* SideBar.width - (SideBarTab.width + SideBarTab.height) / 2 */
+  bottom:             50%;
+  -ms-transform:      translateY(15px) rotate(-90deg);              /* SideBarTab.height / 2 */
+  -webkit-transform:  translateY(15px) rotate(-90deg);              /* SideBarTab.height / 2 */
+  transform:          translateY(15px) rotate(-90deg);              /* SideBarTab.height / 2 */
+
+  /* Safe to modify: */
+
+  background-color:   red;
+  text-align:         center;
+}

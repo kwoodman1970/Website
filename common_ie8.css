@@ -1,0 +1,12 @@
+/**********************************************************************************************
+
+common_ie8.css -- adjusts styles common to the website to work with Internet Explorer 8
+
+**********************************************************************************************/
+
+/* Background SVG images aren't supported */
+
+BODY
+{
+  background-image:  url('kw.png');
+}

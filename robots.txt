@@ -1,0 +1,6 @@
+User-agent:  *
+Disallow:  /ourgardens/
+Disallow:  /ourgardens2/
+Disallow:  /slides/
+Disallow:  /stelizabethseton/
+Disallow:  /stsebastian/

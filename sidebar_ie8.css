@@ -1,0 +1,25 @@
+/**********************************************************************************************
+
+sidebar_ie8.css -- adjusts styles for "sidebar.css" to work with Internet Explorer 8
+
+**********************************************************************************************/
+
+/*
+The geometry for the tab is different for Internet Explorer.  It is not possible to centre the
+tab's element vertically, so, instead, it's placed in the top-right corner and given a fixed
+width.  Just make sure that the width is large enough to accomodate the content.
+
+The following mathematical relationships must now hold:
+
+  SideBarTab.top = 0px
+  SideBar.width > SideBarTab.width
+  SideBarTab.left = SideBar.width - SideBarTab.height
+*/
+
+#SideBarTab
+{
+  left:    300px;                                       /* SideBar.width - SideBarTab.height */
+  top:     0px;
+  width:   50px;
+  filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
